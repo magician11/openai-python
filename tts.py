@@ -1,10 +1,11 @@
 from pathlib import Path
 from openai import OpenAI
+import sys
 
 client = OpenAI()
 
-# Define the path to the text file
-text_file_path = Path(__file__).parent / "input.txt"
+# Define the path to the text file from the first command line argument
+text_file_path = Path(sys.argv[1])
 
 # Open the text file and read its contents
 with open(text_file_path, "r") as file:
