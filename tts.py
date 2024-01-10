@@ -15,9 +15,11 @@ speech_file_path = Path(__file__).parent / "speech.mp3"
 
 # Use the contents of the text file as the input
 response = client.audio.speech.create(
-    model="tts-1",
-    voice="nova",
-    input=text_input,
+    model="tts-1", voice="nova", input=text_input, speed=0.88
 )
 
 response.stream_to_file(speech_file_path)
+
+# Smooth and Silent - Shimano Steps E7000 motor with max torque of 70Nm.
+# Long Range Battery - Up to 150km range, chargeable in 3.5 hours.
+# Smooth Shifting - Shimano Deore M6000 gears for improved stability and retention.
