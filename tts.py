@@ -15,7 +15,7 @@ speech_file_path = Path(__file__).parent / "speech.mp3"
 
 # Use the contents of the text file as the input
 response = client.audio.speech.create(
-    model="tts-1", voice="nova", input=text_input, speed=0.88
+    model="tts-1", voice="nova", input=text_input, speed=1
 )
 
 response.stream_to_file(speech_file_path)
