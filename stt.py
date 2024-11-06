@@ -67,13 +67,13 @@ def transcribe_audio_file(audio_file_path):
         for path in audio_file_path:
             with open(path, "rb") as audio_file:
                 transcript = client.audio.transcriptions.create(
-                    model="whisper-1", file=audio_file
+                    model="whisper-1", file=audio_file, language="en"
                 )
                 transcript_texts.append(transcript.text)
     else:
         with open(audio_file_path, "rb") as audio_file:
             transcript = client.audio.transcriptions.create(
-                model="whisper-1", file=audio_file
+                model="whisper-1", file=audio_file, language="en"
             )
             transcript_texts.append(transcript.text)
     return " ".join(transcript_texts)
